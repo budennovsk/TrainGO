@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 	fmt.Println(get_id())
@@ -8,6 +11,7 @@ func main() {
 	fmt.Println(id, s)
 	//fmt.Println(get_iter())
 	res()
+	res_for()
 
 }
 
@@ -49,4 +53,19 @@ func res() {
 
 	}
 
+}
+func res_for() {
+	arr := []string{"a", "d", "c"}
+	fmt.Println(arr)
+
+	dict_map := map[string]int{
+		"b": 11,
+	}
+	u := dict_map["b"]
+	fmt.Println(u, "kkkkkk")
+	fmt.Println(dict_map)
+	fmt.Println(reflect.TypeOf(dict_map))
+	for _, k := range dict_map {
+		fmt.Print(k)
+	}
 }
